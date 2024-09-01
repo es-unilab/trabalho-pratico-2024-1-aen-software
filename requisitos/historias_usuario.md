@@ -10,6 +10,7 @@
 - Como administrador, gostaria de gerenciar professor;      
 - Como administrador, gostaria de gerenciar categorias;    
 - Como administrador, gostaria de aprovar ou reprovar PIT's.  
+- Nelio
 
 
 
