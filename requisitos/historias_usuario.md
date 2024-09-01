@@ -4,9 +4,7 @@
 - Como professor, gostaria de gerenciar atividades;  
 - Como professor, gostaria de acompanhar o status do meu PIT;  
 - Como professor, gostaria de gerar RIT;
-- Como professor, gostaria de gerar um relatório das minhas atividades    
-- Como professor, gostaria de     
-- Como professor, gostaria de     
+- Como professor, gostaria de gerar um relatório das minhas atividades      
 
 **Administrador**  
 - Como administrador, gostaria de gerenciar professor;      
