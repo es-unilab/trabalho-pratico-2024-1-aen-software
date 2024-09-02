@@ -2,7 +2,7 @@
 
 **Gerenciar Professor**
 
-**Ator:** Administrador do Sistema
+**Ator:** Administrador do Sistema;
 
 **Pré-condições:** O administrador deve estar autenticado e autorizado a acessar o sistema.
 
