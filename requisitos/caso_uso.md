@@ -1,8 +1,22 @@
 # Casos de Uso
 
-**Cadastrar Professor**
+**Gerenciar Professor**
 **Ator:** Administrador
-**Cadastro no Sistema**
+**Pré-condições:**
+**Fluxo Principal:**
+1. Iniciar Sessão;
+2. Acessar Gestão de Professores;
+3. Cadastrar Novo Professor (Nome,Email,SIAPE,Regime de trabalho);
+4. Editar Dados do Professor;
+5. Excluir Professor;
+6. Gerar Relatório de Professores;
+
+**Fluxo Alternativo:**
+4a. **Edição de Dados**Dados Inválidos: Se os dados atualizados não forem válidos, o sistema exibe uma mensagem de erro e solicita correção.
+
+**Requisitos Especiais:**
+5.a **Segurança:** O sistema deve garantir que apenas administradores autenticados e autorizados possam acessar e realizar operações de gerenciamento de professores.
+5.b **Persistência:** As informações dos professores devem ser armazenadas de forma segura e persistente no banco de dados.
 
 **Cadastrar Atividade**  
 **Ator:** Professor(Usuário)  
