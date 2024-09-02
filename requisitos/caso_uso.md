@@ -46,7 +46,7 @@
 **Ator:** Professor(Usuário)  
 **Fluxo Normal:**
 
-**fluxo normal
+**fluxo normal**
 - remore atividade.
 - professora faz o login
 - professor localiza a atividade
