@@ -1,8 +1,11 @@
 # Casos de Uso
 
 **Gerenciar Professor**
+
 **Ator:** Administrador do Sistema
+
 **Pré-condições:** O administrador deve estar autenticado e autorizado a acessar o sistema.
+
 **Fluxo Principal:**
 1. Iniciar Sessão;
 2. Acessar Gestão de Professores;
