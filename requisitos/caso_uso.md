@@ -51,15 +51,15 @@
 **Fluxo Normal:**
 
 **fluxo normal**
-1- Autenticar professor;
-2- O professor navega até a lista de atividades
-3- O professor seleciona a atividade que deseja remover
-4- O sistema solicita a confirmação da remoção da atividade.
-5- O professor confirma a remoção.
-6- O sistema remove a atividade e exibe uma mensagem confirmando a remoção da atividade.
+1. Autenticar professor;
+2. O professor navega até a lista de atividades
+3. O professor seleciona a atividade que deseja remover
+4. O sistema solicita a confirmação da remoção da atividade.
+5. O professor confirma a remoção.
+6. O sistema remove a atividade e exibe uma mensagem confirmando a remoção da atividade.
 
 **Excepções:**
-- Se o professor inserir credenciais inválidas na etapa 1, o sistema exibe uma mensagem de erro.
-- Se o professor não encontrar a atividade na etapa 2, o sistema exibe uma mensagem informando que a atividade não foi encontrada.
-- Se o professor optar por não confirmar a remoção da atividade na etapa 4, o sistema cancela a operação.
-Se o professor confirmar a remoção da atividade na etapa 5, o sistema remove a atividade.
+1a. Se o professor inserir credenciais inválidas, o sistema exibe uma mensagem de erro.
+2a. Se o professor não encontrar a atividade, o sistema exibe uma mensagem informando que a atividade não foi encontrada.
+4a. Se o professor optar por não confirmar a remoção da atividade, o sistema cancela a operação.
+5a. Se o professor confirmar a remoção da atividade, o sistema remove a atividade.
