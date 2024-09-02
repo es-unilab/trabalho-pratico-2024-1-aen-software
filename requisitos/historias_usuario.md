@@ -15,6 +15,6 @@
 
 ### Glossário  
 - **PIT:** Plano Individual de Trabalho
-- **RIT:** Relarório Individual de Trabalho 
+- **RIT:** Relatório Individual de Trabalho 
 
 
