@@ -45,14 +45,21 @@
 5c. Se o somatório das cargas horárias da categoria não estiver nos limites da referida categoria, solicitar novamente a carga horária;
 
 
-**deletar Atividade**  
+
+**Remover Atividade**  
 **Ator:** Professor(Usuário)  
 **Fluxo Normal:**
 
 **fluxo normal**
-- remore atividade.
-- professora faz o login
-- professor localiza a atividade
-- professor seleciona a atividade 
-- professor deleta a tividade
-- professor confirma a atividade deletada
+1- Autenticar professor;
+2- O professor navega até a lista de atividades
+3- O professor seleciona a atividade que deseja remover
+4- O sistema solicita a confirmação da remoção da atividade.
+5- O professor confirma a remoção.
+6- O sistema remove a atividade e exibe uma mensagem confirmando a remoção da atividade.
+
+**Excepções:**
+- Se o professor inserir credenciais inválidas na etapa 1, o sistema exibe uma mensagem de erro.
+- Se o professor não encontrar a atividade na etapa 2, o sistema exibe uma mensagem informando que a atividade não foi encontrada.
+- Se o professor optar por não confirmar a remoção da atividade na etapa 4, o sistema cancela a operação.
+Se o professor confirmar a remoção da atividade na etapa 5, o sistema remove a atividade.
