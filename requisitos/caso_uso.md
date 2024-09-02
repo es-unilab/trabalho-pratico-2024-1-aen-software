@@ -1,8 +1,8 @@
 # Casos de Uso
 
 **Gerenciar Professor**
-**Ator:** Administrador
-**Pré-condições:**
+**Ator:** Administrador do Sistema
+**Pré-condições:** O administrador deve estar autenticado e autorizado a acessar o sistema.
 **Fluxo Principal:**
 1. Iniciar Sessão;
 2. Acessar Gestão de Professores;
@@ -12,11 +12,14 @@
 6. Gerar Relatório de Professores;
 
 **Fluxo Alternativo:**
-4a. **Edição de Dados**Dados Inválidos: Se os dados atualizados não forem válidos, o sistema exibe uma mensagem de erro e solicita correção.
+**Edição de Dados**
+4a.Dados Inválidos: Se os dados atualizados não forem válidos, o sistema exibe uma mensagem de erro e solicita correção.
 
 **Requisitos Especiais:**
-5.a **Segurança:** O sistema deve garantir que apenas administradores autenticados e autorizados possam acessar e realizar operações de gerenciamento de professores.
-5.b **Persistência:** As informações dos professores devem ser armazenadas de forma segura e persistente no banco de dados.
+**Segurança:**
+5.a O sistema deve garantir que apenas administradores autenticados e autorizados possam acessar e realizar operações de gerenciamento de professores.
+**Persistência:** 
+5.b As informações dos professores devem ser armazenadas de forma segura e persistente no banco de dados.
 
 **Cadastrar Atividade**  
 **Ator:** Professor(Usuário)  
