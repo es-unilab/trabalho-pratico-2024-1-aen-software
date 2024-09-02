@@ -59,7 +59,7 @@
 6. O sistema remove a atividade e exibe uma mensagem confirmando a remoção da atividade.
 
 **Excepções:**
-1a. Se o professor inserir credenciais inválidas, o sistema exibe uma mensagem de erro.
-2a. Se o professor não encontrar a atividade, o sistema exibe uma mensagem informando que a atividade não foi encontrada.
-4a. Se o professor optar por não confirmar a remoção da atividade, o sistema cancela a operação.
-5a. Se o professor confirmar a remoção da atividade, o sistema remove a atividade.
+1a. Se o professor inserir credenciais inválidas, o sistema exibe uma mensagem de erro;
+2a. Se o professor não encontrar a atividade, o sistema exibe uma mensagem informando que a atividade não foi encontrada;
+4a. Se o professor optar por não confirmar a remoção da atividade, o sistema cancela a operação;
+5a. Se o professor confirmar a remoção da atividade, o sistema remove a atividade;
