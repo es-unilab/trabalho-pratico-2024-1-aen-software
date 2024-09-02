@@ -20,12 +20,13 @@
 4a.Dados Inválidos: Se os dados atualizados não forem válidos, o sistema exibe uma mensagem de erro e solicita correção.
 
 **Requisitos Especiais:**
-**Segurança:**
+**Segurança**
 
-5.a O sistema deve garantir que apenas administradores autenticados e autorizados possam acessar e realizar operações de gerenciamento de professores.
-**Persistência:** 
+1a.O sistema deve garantir que apenas administradores autenticados e autorizados possam acessar e realizar operações de gerenciamento de professores.
 
-5.b As informações dos professores devem ser armazenadas de forma segura e persistente no banco de dados.
+**Persistência** 
+
+As informações dos professores devem ser armazenadas de forma segura e persistente no banco de dados.
 
 **Cadastrar Atividade**  
 **Ator:** Professor(Usuário)  
