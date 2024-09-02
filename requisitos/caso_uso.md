@@ -40,3 +40,16 @@
 5a. Se a carga horária não estiver nos limites do tipo de atividade referido, solicitar novamente carga horária;  
 5b. Se o somatório das cargas horárias da subcategoria não estiver nos limites da referida subcategoria, solicitar novamente a carga horária;
 5c. Se o somatório das cargas horárias da categoria não estiver nos limites da referida categoria, solicitar novamente a carga horária;
+
+
+**deletar Atividade**  
+**Ator:** Professor(Usuário)  
+**Fluxo Normal:**
+
+**fluxo normal
+- remore atividade.
+- professora faz o login
+- professor localiza a atividade
+- professor seleciona a atividade 
+- professor deleta a tividade
+- professor confirma a atividade deletada
