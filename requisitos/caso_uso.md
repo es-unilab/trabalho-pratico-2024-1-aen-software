@@ -1,5 +1,9 @@
 # Casos de Uso
 
+**Cadastrar Professor**
+**Ator:** Administrador
+**Cadastro no Sistema**
+
 **Cadastrar Atividade**  
 **Ator:** Professor(Usuário)  
 **Fluxo Normal:**
