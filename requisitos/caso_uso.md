@@ -14,7 +14,7 @@
 5. Excluir Professor;
 6. Gerar Relatório de Professores;
 
-**Exceções:**
+**Fluxo Alternativo:**
 
 4a.Dados Inválidos: Se os dados atualizados não forem válidos, o sistema exibe uma mensagem de erro e solicita correção.
 
