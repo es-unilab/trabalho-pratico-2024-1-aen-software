@@ -6,7 +6,7 @@
 
 **Pré-condições:** O administrador deve estar autenticado e autorizado a acessar o sistema.
 
-**Fluxo Principal:**
+**Fluxo Normal:**
 1. Iniciar Sessão;
 2. Acessar Gestão de Professores;
 3. Cadastrar Novo Professor (Nome,Email,SIAPE,Regime de trabalho);
@@ -14,19 +14,13 @@
 5. Excluir Professor;
 6. Gerar Relatório de Professores;
 
-**Fluxo Alternativo:**
-**Edição de Dados**
+**Exceções:**
 
 4a.Dados Inválidos: Se os dados atualizados não forem válidos, o sistema exibe uma mensagem de erro e solicita correção.
 
-**Requisitos Especiais:**
-**Segurança**
-
 1a.O sistema deve garantir que apenas administradores autenticados e autorizados possam acessar e realizar operações de gerenciamento de professores.
 
-**Persistência** 
-
-As informações dos professores devem ser armazenadas de forma segura e persistente no banco de dados.
+6.a As informações dos professores devem ser armazenadas de forma segura e persistente no banco de dados.
 
 **Cadastrar Atividade**  
 **Ator:** Professor(Usuário)  
