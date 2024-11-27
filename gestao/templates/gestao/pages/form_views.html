@@ -1,0 +1,32 @@
+{% extends "global/base.html" %}
+{% block content %}
+<h1 class="text-center mt-2">Formulario de registro de Usuário kkk</h1>
+<hr>
+
+<form action="{{form_action}}" method="POST" >
+    {% csrf_token %}
+    <div class="container">
+          <div class="card p-3">
+          
+          <div class="row">
+            {% for user in form %}
+          <div class="form-group col-ms-6 m-2">
+            <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label for="user.label_for_id" class="input-group-text">{{user.label}}</label>
+                    </div>
+                    {{user}}
+                    {% comment %} <code>{{user.errors}}</code> {% endcomment %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+          
+          <div class="form-group">
+                <button class="btn btn-outline-danger mr-2"  type="reset" >Cancelar</button>
+                <button class="btn btn-outline-primary d-block-md">Enviar</button>
+          </div>
+          
+          </div>
+    </div>
+    {% endblock content %}

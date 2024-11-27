@@ -1,0 +1,61 @@
+{% extends "global/base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card p-3 mt-3">
+        <h2 class="text-center ">Selecionar Atividades</h2>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-9">
+                <form method="post" action="{% url "autor:minhas_atividades" %}">
+                    {% csrf_token %}
+                    <!-- Formulário de Seleção de Atividade -->
+                    <div class="p-3 div_select">
+                        {{atividade_form}}
+                    </div>
+                    <div class="div_select_itens">
+                    <!-- Subformulário: Tipo de Ensino -->
+                        <div id="ensino-section" style="display:none;"class="p-3">
+                            <h3>Ensino</h3>
+                            <label for="tipo_ensino">Tipo de Ensino:</label>
+                        <!--{{tipo_ensino_form.nome}}-->
+                        {{tipo_ensino_form.nome}}
+
+                            <!-- Seção de Graduação -->
+                            <div id="graduacao-section" style="display:none;"class="p-3">
+                                <h4>Graduação</h4>
+                                {{graduacao_form}}
+                            </div>
+
+                            <!-- Seção de Pós-Graduação --> <!-- Campos de Carga Horária -->
+                            <div id="pos-graduacao-section" style="display:none;"class="p-3">
+                                <h4>Pós-Graduação</h4>
+                                {{pos_graduacao_form}}
+                            </div>
+                        </div>
+
+                        <!-- Subformulário: Pesquisa (exibido se "Pesquisa" for selecionado) --> <!-- Campos de Carga Horária -->
+                        <div id="pesquisa-section" style="display:none;"class="p-3">
+                            <h3>Pesquisa</h3>
+                            {{pesquisa_form}}
+                        </div>
+                        <div class="form-group ml-4">
+                        <button type="submit"class="p-2 btn btn-outline-primary mt-4">Salvar Atividade</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Seção de Cálculo da Carga Horária Total -->
+            <div class="col-sm-3">
+                <h3>Carga Horária Total:</h3>
+                <p>Mínima: <span id="carga-min">{{ total_carga_min }}</span></p>
+                <p>Máxima: <span id="carga-max">{{ total_carga_max }}</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+ {% include "global/parciais/scriptatividade.html" %}
+</script>
+{% endblock content %}

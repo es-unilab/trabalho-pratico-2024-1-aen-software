@@ -1,0 +1,26 @@
+
+<div>{% include "global/parciais/messages.html" %}</div>
+{% if not user.is_authenticated %}
+
+<form action="{{form_action_login}}"method="POST">
+    {% csrf_token %}
+    <div class="row">
+        <div class="form-group col-sm-8">
+            <div class="input-group-prepend mt-2 ">
+                <label for="l.label_for_id" class="input-group-text" >{{login_form.username.label}}</label>
+                {{login_form.username}}
+            </div>
+            <div class="input-group-prepend mt-2 ">
+                <div class="btn-mostrar-senha"></div>
+                        <label for="login_form.label_for_id" class="input-group-text" >{{login_form.password.label}}</label>
+                        {{login_form.password}}
+                        <i class="bi bi-eye-fill btn-SenhaMostrar"onclick="mostrarSenha()"id="btn-senha"></i>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-sm-4 mt-2 p-2 margin_buttom">
+            <button class="btn btn-outline-primary d-block-md">login</button>
+        </div>
+    </div>
+</form>
+{% endif %}

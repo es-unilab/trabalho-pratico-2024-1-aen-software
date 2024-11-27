@@ -1,0 +1,36 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+
+<div class="container py-3 text-center">
+      <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                  <div class="card">
+                        <div class="card-body">
+                              <h5 class="card-title">Cadastrar funcionario</h5>
+                              <p class="card-text">cadastre aqui um novo <code> Funcionario</code></p>
+                              {% if not user.is_authenticated %}
+                              <a href="{% url "autor:registro" %}" class="btn btn-outline-primary">novo funcionario</a>
+                              {% else %}
+                                    <a href="{% url "autor:registro" %}" class="btn btn-outline-primary invalid">novo funcionario</a>
+                  
+                              {% endif %}
+                        </div>
+                  </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                  <div class="card">
+                        <div class="card-body">
+                              <h5 class="card-title">Fazer login</h5>
+                              <hr>
+                              <p class="card-text">
+                                {% include "gestao/pages/login.html" %}
+                                    </div>
+                                </form>
+                              </p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+ {% endblock content %}

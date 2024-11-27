@@ -1,0 +1,35 @@
+<div class="container py-3">
+    <div class="mt-3">
+        {% include "global/parciais/messages.html" %}
+    </div>
+    <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-3 col-xs-12 ">
+                        
+                      {% if funcionarios %}
+                            <table class="table table-responsive table-striped mt-3 px-4">
+                                  <thead class="table-dark text-white border border-primary">
+                                        <tr >
+                                              <th class="p-3" >NOME</th>
+                                              <th class="p-3">SOBRENOME</th>
+                                              <th class="p-3">CPF</th>
+                                              
+                                              {% endif %}
+                                        </tr>
+                                  </thead>
+                                  <tbody class="border border-primary" >
+                                        {% for funcionario in funcionarios %}
+                                              <tr>
+                                                    <td class="p-3">{{funcionario.first_name}}</td>
+                                                    <td class="p-3">{{funcionario.last_name}}</td>
+                                                    <td class="p-3">{{funcionario.cpf}}</td>
+                                                    {% if not pesq %}
+                                                    {% endif %}
+                                                    
+                                              </tr>
+                                        {% endfor %}
+                                  </tbody>
+                            </table>
+                </div>
+          </div>
+    </div>
+</div>

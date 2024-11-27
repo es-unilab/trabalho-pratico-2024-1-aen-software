@@ -1,0 +1,18 @@
+{% extends "global/base.html" %}
+{% block title %}dashboard{% endblock title %}dashboard
+{% block content %}
+<div class="mt-3">
+{% include "global/parciais/messages.html" %}
+</div>
+{% if user.is_authenticated %}
+  <h2 class="text-center">PERFIL DO USUÁRIO ({{ request.user.username }})</h2>
+  <hr>
+  <div class="login-message m-4">
+    
+    <a class="btn btn-outline-info d-block" href="{% url "autor:minhas_atividades" %}">Minhas Atividades</a>
+    <a class="btn btn-outline-info d-block mt-3" href="{% url "autor:sucesso" %}">Criar Atividades</a>
+    <a class="btn btn-outline-info d-block mt-3" href="{% url 'autor:atualizar_fun'%}
+    ">Editar Perfil</a>
+  </div>
+{% endif %}
+{% endblock content %}

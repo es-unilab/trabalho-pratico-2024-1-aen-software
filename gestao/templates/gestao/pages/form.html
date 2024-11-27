@@ -1,0 +1,45 @@
+{% extends "global/base.html" %}
+{% block content %}
+{% if form_title %}
+<h1 class="text-center mt-2">Formulario de registro de Usuário</h1>
+{% else %}
+<h1 class="text-center mt-2">Atualização dos dados de ({{user}})</h1>
+{% endif %}
+<hr>
+{% include "global/parciais/messages.html" %}
+<form action="{{form_action}}" method="POST" >
+    {% csrf_token %}
+    <div class="container">
+          <div class="card p-3">
+          
+          <div class="row">
+            {% for user in form %}
+          <div class="form-group col-ms-6 m-2">
+            <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label for="user.label_for_id" class="input-group-text">{{user.label}}</label>
+                    </div>
+                    {{user}}
+                  
+                    {% comment %}
+                    {% if {{form.password}}%}
+                      <i class="bi bi-eye-fill btn-SenhaMostrar"onclick="mostrarSenha()"id="btn-senha"></i>
+                    {% endif %}
+                     <code>{{user.errors}}</code> {% endcomment %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+          
+          <div class="form-group">
+                <button class="btn btn-outline-danger mr-2"  type="reset" ><a href="{% url "website:home" %}" >Cancelar</a></button>
+                {% if form_title %}
+                <button class="btn btn-outline-primary d-block-md">Enviar</button>
+                {% else %}
+                <button class="btn btn-outline-primary d-block-md">Atualizar</button>
+                {% endif %}
+          </div>
+          
+          </div>
+    </div>
+    {% endblock content %}
