@@ -1,0 +1,192 @@
+:root {
+    --color-primary: #269fe6;
+    --color-primary-hover: #2086c2;
+    --color-primary-dark: #13141f;
+    --color-primary-dark-hover: #212336;
+    --color-primary-light: #d4ecfa;
+    --color-primary-light-hover: #bdd8e7;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-dark-text: #444;
+    --color-info-light: #cce5ff;
+    --color-debug-light: #cce5ff;
+    --color-success-light: #d4edda;
+    --color-alert-light: #fff3cd;
+    --color-warning-light: #fff3cd;
+    --color-error-light: #f8d7da;
+
+    --color-info-dark: #4d86c4;
+    --color-debug-dark: #4d86c4;
+    --color-success-dark: #4a9c5d;
+    --color-alert-dark: #927f40;
+    --color-warning-dark: #927f40;
+    --color-error-dark: #da525d;
+
+    --color-gray-0: #f9f9f9;
+    --color-gray-1: #e0e0e0;
+    --color-gray-2: #c7c7c7;
+    --color-gray-3: #aeaeae;
+    --color-gray-4: #959595;
+    --color-gray-5: #7d7d7d;
+    --color-gray-6: #646464;
+    --color-gray-7: #4b4b4b;
+    --color-gray-8: #323232;
+    --color-gray-9: #191919;
+
+    --font-primary: sans-serif;
+    --font-headings: 'Roboto Slab', serif;
+
+    --spacing-gutter-medium: 3rem;
+    --spacing-gutter-large: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    
+    font-family: var(--font-primary);
+    background: var(--color-gray-1);
+    color: var(--color-dark-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-headings);
+}
+ /* Messages */
+
+ .message {
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-dark-text);
+    background: var(--color-gray-2);
+    color: var(--color-dark-text);
+  }
+  
+  .message-error {
+    border: 1px solid var(--color-error-dark);
+    background: var(--color-error-light);
+    color: var(--color-error-dark);
+  }
+  
+  .message-success {
+    border: 1px solid var(--color-success-dark);
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+  }
+  
+  .message-warning {
+    border: 1px solid var(--color-warning-dark);
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+  }
+  
+  .message-alert {
+    border: 1px solid var(--color-alert-dark);
+    background: var(--color-alert-light);
+    color: var(--color-alert-dark);
+  }
+  
+  .message-info {
+    border: 1px solid var(--color-info-dark);
+    background: var(--color-info-light);
+    color: var(--color-info-dark);
+  }
+  
+  .message-debug {
+    border: 1px solid var(--color-debug-dark);
+    background: var(--color-debug-light);
+    color: var(--color-debug-dark);
+  }
+
+.btn-mostrar-senha{
+    position: relative;
+}
+
+.btn-password{
+    outline: 0;
+    padding: 0px 50px 0px 25px;
+}
+.btn-SenhaMostrar {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 80%;
+    margin-top: 4px;
+    color: var(--color-gray-4)
+
+}
+a {
+  text-decoration: None;
+}
+a :hover{
+  text-decoration: None;
+  color: var(--color-white);
+}
+.autor-perfil-link {
+  color: var(--color-white);
+
+}
+.autor-logout-link {
+  color: var(--color-white);
+  size: 20px;
+  font-size: 30px;
+}
+.autor-perfil-link :hover{
+  color: var(--color-white);
+}
+.autor-logout-link :hover{
+  color: var(--color-white);
+  text-decoration: none;
+
+
+}
+.perfil-logout {
+  padding-left: 5px;
+}
+a.invalid {
+  pointer-events: none;
+  cursor: default;
+
+}
+/*Css relacionado as atividade*/
+.select_font { 
+  width: 80%;
+
+}
+.div_select {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+.div_select_itens {
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+.carga_h { 
+  width: 20%;
+
+}
+.margin_buttom {
+  margin-left: -50px;
+}
+
+.background-img {
+  background-image: url('/base_static/img/1-logoSistema.jpeg');
+  
+}
+.img-logo {
+  background-color: rgba(0, 0, 255, 0.6);
+  opacity: 0.8;
+}

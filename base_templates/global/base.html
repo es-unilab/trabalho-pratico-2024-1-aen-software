@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  {% include 'global/parciais/head.html' %}
+
+   <title>inicio |{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+  {% include 'global/parciais/header.html' %}
+  {% block content %}
+  {% include 'website/pages/home.html' %}
+  {% include 'website/pages/form.html' %}
+  {% include 'website/pages/dashboard.html' %}
+  {% include 'website/pages/criar_atividades.html' %}
+  {% include 'website/pages/minhas_atividades.html' %}
+  {% endblock content %}
+
+  {% include 'global/parciais/footer.html' %}
+      
+  {% include 'global/parciais/script.html' %}
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm bg-primary py-4 text-white navbar-light">
+      <a href="{% url 'website:home' %}" class="navbar-brand">
+        <div class="row ">
+        <img src="{% static 'img/1-logoSistema.jpeg' %}" class="d-inline img-logo" alt="logo" height="80px" width="150px" > <h2 class="d-inline" >
+        Sistema de Gestão de Carga Horária </h2></a> </div>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#menuToggle">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="menuToggle">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a href="{% url 'website:home' %}" class="nav-link"></a>
+          </li>
+          <li class="nav-item active">
+            
+            {% if user.is_authenticated %}
+
+            <div class="perfil-logout row mr-2">
+              <a class="autor-perfil-link d-inline mr-3" href="{% url "autor:dashboard" %}"><h3>perfil<i class="bi bi-person-check"></i></h3></a>
+              |
+              <a class="autor-logout-link d-inline ml-3" href="{% url "autor:logout" %}"><i class="bi bi-box-arrow-right "></i></a>
+            </div>
+            
+
+            {% endif %}
+            {% if not log %}
+            <form action="{% url 'website:pesquisa'%}" method="GET" >
+              <div class="input-group">
+                <input type="search" name="search" id="" class="form-control" value="{{termo_pesquisa.first_name}}" placeholder="pesquisa">
+                <div class="input-group-append search-btn"><button class="input-group-text search-btn"><span ><i class="fas fa-search"></i></span></button></div>
+              </div>
+            </form>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+  </nav>

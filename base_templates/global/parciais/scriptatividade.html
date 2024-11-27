@@ -1,0 +1,81 @@
+// Função para exibir os formulários dinamicamente
+$(document).ready(function () {
+    $('#atividade').on('change', function () {
+        let atividadeSelecionada = $(this).val();
+
+        // Verifica se a atividade selecionada é Ensino, Pesquisa, Extensão ou Gestão e exibe o formulário correspondente
+        if (atividadeSelecionada === 'Ensino') {
+            $('#ensino-section').show();
+            $('#pesquisa-section').hide();
+        } else if (atividadeSelecionada === 'Pesquisa') {
+            $('#pesquisa-section').show();
+            $('#ensino-section').hide();
+        } else if (atividadeSelecionada === 'Extensão') {
+            $('#extensao-section').show();
+            $('#ensino-section').hide();
+        } else if (atividadeSelecionada === 'Gestão') {
+            $('#gestao-section').show();
+            $('#ensino-section').hide();
+        } else {
+            $('#ensino-section').hide();
+            $('#pesquisa-section').hide();
+        }
+    });
+
+    // Função para exibir os campos de "Graduação", "Pós-Graduação", "Extensão" ou "Gestão" ao selecionar o tipo de ensino
+    $('#tipo_ensino').on('change', function () {
+        let tipoEnsinoSelecionado = $(this).val();
+
+        if (tipoEnsinoSelecionado === 'graduacao') {
+            $('#graduacao-section').show();
+            $('#pos-graduacao-section').hide();
+        } else if (tipoEnsinoSelecionado === 'pos_graduacao') {
+            $('#graduacao-section').hide();
+            $('#pos-graduacao-section').show();
+        } else if (tipoEnsinoSelecionado === 'extensao') {
+            $('#pos-graduacao-section').hide();
+            $('#extensao-section').show();
+        } else if (tipoEnsinoSelecionado === 'gestao') {
+            $('#extensao-section').hide();
+            $('#gestao-section').show();
+        } else {
+            $('#graduacao-section').hide();
+            $('#pos-graduacao-section').hide();
+        }
+    });
+
+    // Função para calcular a carga horária total e realizar verificações
+    $('form').on('input', function () {
+        // Valores de carga horária mínima e máxima para graduação e pós-graduação
+        let cargaMinGraduacao = parseInt($('#carga_horaria_min_graduacao').val()) || 0;
+        let cargaMaxGraduacao = parseInt($('#carga_horaria_max_graduacao').val()) || 0;
+
+        let cargaMinPosGraduacao = parseInt($('#carga_horaria_min_pos_graduacao').val()) || 0;
+        let cargaMaxPosGraduacao = parseInt($('#carga_horaria_max_pos_graduacao').val()) || 0;
+
+        // Verificação dinâmica para Graduação
+        if (cargaMinGraduacao > 8) {
+            alert('carga horária mínima valida para Graduação 8h.');
+        }
+        if (cargaMaxGraduacao > 20) {
+            alert('A carga horária máxima para Graduação não pode ser maior que 20h.');
+            cargaMaxGraduacao -=1
+        }
+
+        // Verificação dinâmica para Pós-Graduação
+        if (cargaMinPosGraduacao > 8) {
+            alert('carga horária mínima valida para Pós-Graduação não pode ser menor que 8h.');
+        }
+        if (cargaMaxPosGraduacao > 16) {
+            alert('A carga horária máxima para Pós-Graduação não pode ser maior que 16h.');
+            cargaMaxPosGraduacao -=1
+        }
+
+        // Atualiza os valores totais no frontend (opcional)
+        let totalMin = cargaMinGraduacao + cargaMinPosGraduacao;
+        let totalMax = cargaMaxGraduacao + cargaMaxPosGraduacao;
+
+        $('#carga-min').text(totalMin);
+        $('#carga-max').text(totalMax);
+    });
+});

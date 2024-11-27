@@ -1,0 +1,23 @@
+
+<div class="container">
+      <div class="row">
+            <div class="col">
+                  {% if messages %}
+                  {% for message in messages %}
+                        <div class="alert message {{message.tags}} alert-dismissible text-center">
+                              <button class="close" data-dismiss="alert">
+                                    <span>&times</span>
+                              </button>
+                              {{message}}
+                              {%if form.errors%} 
+                              {%for erro in form%} 
+                              <p>{{erro.errors}}</p>
+                              {%endfor%}
+                              
+                              {%endif%}
+                        </div>
+                  {% endfor %}
+                  {% endif %}
+            </div>
+      </div>
+</div>
